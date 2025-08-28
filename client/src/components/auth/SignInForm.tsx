@@ -23,8 +23,8 @@ export default function SignInForm() {
     authError?: string;
   }>({});
   const [formData, setFormData] = useState({
-    email: "ceo@gpsbaku.az",
-    password: "GxD=LQkJ:Gu1pgb",
+    email: "",
+    password: "",
   });
 
   // const resetErrors = () => {
