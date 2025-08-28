@@ -16,7 +16,6 @@ export default function SignInForm() {
   const [captchaValue, setCaptchaValue] = useState<string | null>(null);
   const [showPassword, setShowPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
-  const [rememberMe, setRememberMe] = useState(false);
   const [errors, setErrors] = useState<{
     email?: string;
     password?: string;
@@ -28,9 +27,9 @@ export default function SignInForm() {
     password: "GxD=LQkJ:Gu1pgb",
   });
 
-  const resetErrors = () => {
-    setErrors({});
-  };
+  // const resetErrors = () => {
+  //   setErrors({});
+  // };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;

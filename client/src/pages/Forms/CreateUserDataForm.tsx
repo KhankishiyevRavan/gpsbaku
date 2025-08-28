@@ -10,7 +10,6 @@ import Input from "../../components/form/input/InputField";
 import Radio from "../../components/form/input/Radio";
 import { EyeCloseIcon, EyeIcon, InfoIcon } from "../../icons";
 // import AddressSection from "../../components/form/AddressSection";
-import PhoneInput from "../../components/form/group-input/PhoneInput";
 import DatePicker from "../../components/form/date-picker";
 import PhoneInputAz from "../../components/form/group-input/PhoneInputAz";
 
@@ -298,6 +297,7 @@ export default function CreateUserDataForm() {
   ];
   return (
     <ComponentCard title="İstifadəçi Yaratma Formu ">
+      {error}
       <form onSubmit={handleSubmit} autoComplete="off">
         <div className="space-y-6 grid grid-cols-1 lg:grid-cols-2 gap-4">
           <div>

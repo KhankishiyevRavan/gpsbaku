@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router";
 
 import {
   ChevronDownIcon,
-  DocsIcon,
   DollarLineIcon,
   GroupIcon,
   PencilIcon,
@@ -255,8 +254,7 @@ const AppSidebar: React.FC = () => {
     },
   ];
   const [hoveredItemIndex, setHoveredItemIndex] = useState<number | null>(null);
-  const { isExpanded, isMobileOpen, isHovered, setIsHovered, toggleSidebar } =
-    useSidebar();
+  const { isExpanded, isMobileOpen, toggleSidebar } = useSidebar();
   const location = useLocation();
 
   const [openSubmenu, setOpenSubmenu] = useState<{
@@ -283,20 +281,17 @@ const AppSidebar: React.FC = () => {
 
       if (
         path === "/create-contract" &&
-        location.pathname.startsWith("/edit-contract") 
+        location.pathname.startsWith("/edit-contract")
       ) {
         return true;
       }
       if (
         path === "/create-contract" &&
-        location.pathname.startsWith("/create-contract") 
+        location.pathname.startsWith("/create-contract")
       ) {
         return true;
       }
-      if (
-        path === "/contracts" &&
-        location.pathname.startsWith("/contract/") 
-      ) {
+      if (path === "/contracts" && location.pathname.startsWith("/contract/")) {
         return true;
       }
 
@@ -309,7 +304,7 @@ const AppSidebar: React.FC = () => {
       if (
         path === "/create-sale" &&
         location.pathname.startsWith("/payments/new")
-      ) { 
+      ) {
         return true;
       }
 
@@ -319,10 +314,7 @@ const AppSidebar: React.FC = () => {
       ) {
         return true;
       }
-      if (
-        path === "/call" &&
-        location.pathname.startsWith("/call/")
-      ) {
+      if (path === "/call" && location.pathname.startsWith("/call/")) {
         return true;
       }
 
@@ -530,7 +522,7 @@ const AppSidebar: React.FC = () => {
                             : "hover:bg-gray-100 dark:hover:bg-gray-700"
                         }`}
                       >
-                        {subItem.name}  
+                        {subItem.name}
                       </Link>
                     </li>
                   ))}

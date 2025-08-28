@@ -8,7 +8,6 @@ import Label from "../../components/form/Label";
 import Select from "../../components/form/Select";
 import Input from "../../components/form/input/InputField";
 import Radio from "../../components/form/input/Radio";
-import PhoneInput from "../../components/form/group-input/PhoneInput";
 import DatePicker from "../../components/form/date-picker";
 import PhoneInputAz from "../../components/form/group-input/PhoneInputAz";
 
@@ -92,7 +91,6 @@ export default function EditUserDataForm() {
     const isLNameEmpty = !lname?.trim();
     const isFatherNameEmpty = !fathername?.trim();
     const isEmailEmpty = !email?.trim();
-    const isPhoneNumber = !phoneNumber?.trim();
     const isAddressEmpty = !address?.trim();
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
